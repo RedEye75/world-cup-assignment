@@ -19,7 +19,13 @@ hr {
     background-color: black;
     border-radius: 15px;
     color: white;
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
+    margin: 0 10%;
+    transition: margin 2s;
+}
+
+.banner:hover {
+    margin: 0 70px;
 }
 
 .banner-text {
@@ -44,7 +50,7 @@ hr {
 /* Link Button styles  */
 .link-button {
     text-decoration: none;
-    background-color: DD0000;
+    background-color: #DD0000;
     color: rgb(252, 247, 247);
     border-radius: 5px;
     padding: 10px 15px;
@@ -53,6 +59,22 @@ hr {
 .link-button:hover {
     background-color: aqua;
     color: blue;
+}
+
+.for-tablet {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-button {
+    text-decoration: none;
+    background-color: #DD0000;
+    color: rgb(252, 247, 247);
+    border-radius: 5px;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -66,8 +88,14 @@ hr {
     height: 272px;
     padding: 0 20px;
     border-radius: 7px;
-    /* margin-top: 15%%; */
 }
+
+.sidebar a {
+    text-decoration: none;
+
+}
+
+/* bar-item styles  */
 
 .bar-item-1 {
     background-color: white;
@@ -77,8 +105,6 @@ hr {
     margin-right: 30px;
     border-radius: 7px;
     text-align: center;
-    padding-top: 10px;
-
 }
 
 .bar-item-2 {
@@ -90,8 +116,6 @@ hr {
     margin-bottom: 0px;
     border-radius: 7px;
     text-align: center;
-    padding-top: 10px;
-
 }
 
 .bar-item-3 {
@@ -100,40 +124,30 @@ hr {
     margin: 30px;
     border-radius: 7px;
     text-align: center;
-    padding-top: 10px;
 }
 
-.sidebar a {
-    text-decoration: none;
 
-}
 
 /* card style  */
 
 .flex {
     display: flex;
-    /* justify-content: space-evenly;  */
-    /* display: grid;
-    grid-template-columns: 25% auto; */
     margin: 5% 15%;
     column-gap: 25px;
 }
 
 .blog-information {
-    /* width: 90%;
-    margin: 0 auto; */
     display: flex;
+
 }
 
 .blogs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* column-gap: 7px; */
-    /* margin-top: 10%; */
     grid-column-gap: 24px;
     row-gap: 24px;
     width: 100%;
-    /* margin-left: 3%; */
+
 }
 
 .blog {
@@ -164,7 +178,6 @@ footer {
     text-align: center;
     font-size: 1em;
     background-color: black;
-    /* padding-top: 4%; */
     margin-top: 6%;
     padding: 4%;
     width: 100%;
@@ -193,10 +206,6 @@ footer {
 /* For Mobiles  */
 
 @media only screen and (max-width: 600px) {
-    /* 
-    .blog-information {
-        flex-direction: column;
-    } */
 
     .banner .banner-image {
         text-align: center;
@@ -211,6 +220,7 @@ footer {
         text-align: center;
         width: 90%;
         margin-right: 5%;
+
     }
 
     .banner-heading {
@@ -220,7 +230,7 @@ footer {
 
     .banner-image img {
         width: 80%;
-        /* grid-template-columns: repeat(1, 1fr); */
+
 
     }
 
@@ -271,10 +281,15 @@ footer {
 
     .blogs {
         grid-template-columns: repeat(1, 1fr);
+
     }
 
     .blog {
         flex-direction: column;
+    }
+
+    .for-tablet {
+        visibility: visible;
     }
 
     .footer-text {
@@ -286,10 +301,6 @@ footer {
     /*-------------------- Media quaries for tablet  -------------------------*/
 
 @media only screen and (min-width: 601px) and (max-width:992px) {
-    /* 
-        .blog-information {
-            flex-direction: column;
-        } */
 
     .banner .banner-image {
         text-align: center;
@@ -303,7 +314,6 @@ footer {
         align-items: center;
         text-align: center;
         width: 100%;
-        /* margin-right: 5%; */
     }
 
     .banner-heading {
@@ -313,7 +323,7 @@ footer {
 
     .banner-image img {
         width: 80%;
-        /* grid-template-columns: repeat(1, 1fr); */
+
 
     }
 
@@ -376,6 +386,14 @@ footer {
 
     .blog {
         flex-direction: column;
+    }
+
+    .for-tablet {
+        display: block;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 5px 10px;
     }
 
     .footer-text {
